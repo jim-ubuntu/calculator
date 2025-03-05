@@ -8,6 +8,39 @@
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+    <div class="calculator-container">
+        <div id="calc-display">
+
+        </div>
+        <div class="button-container" id="row1">
+            <button class="number-button"id="1button" onclick="display.textContent += `1`">1</button>
+            <button class="number-button"id="2button" onclick="display.textContent += `2`">2</button>
+            <button class="number-button"id="3button" onclick="display.textContent += `3`">3</button>
+            <button id="add-button" class="operator-button" onclick="getFirstNumber(); operator=`+`; operatorSelected=`true`; operator">+</button>
+        </div>
+        <div class="button-container" id="row2">
+            <button class="number-button"id="4button" onclick="display.textContent += `4`">4</button>
+            <button class="number-button"id="5button" onclick="display.textContent += `5`">5</button>
+            <button class="number-button"id="6button" onclick="display.textContent += `6`">6</button>
+            <button id="subtract-button" class="operator-button" onclick="getFirstNumber(); operator=`-`; operatorSelected=`true`" >-</button>
+        </div>
+        <div class="button-container" i="row3">
+            <button class="number-button"id="7button" onclick="display.textContent += `7`">7</button>
+            <button class="number-button"id="8button" onclick="display.textContent += `8`">8</button>
+            <button class="number-button"id="9button" onclick="display.textContent += `9`">9</button>
+            <button id="multiply-button" class="operator-button" onclick="getFirstNumber(); operator=`*`; operatorSelected=`true`" >X</button>
+        </div>
+        <div class="button-container" id="row4">
+            <button id="decimal-button">.</button>
+            <button class="number-button"id="0button" onclick="display.textContent += `0`">0</button>
+            <button id="equals-button" class="equals-button" onclick="">=</button>
+            <button id="division-button" class="operator-button" onclick="getFirstNumber(); operator=`/`; operatorSelected=`true`">÷</button>
+        </div>
+        <div>
+        <button id="clear-button" onclick="display.textContent = ``">C</button>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
