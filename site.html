@@ -17,7 +17,7 @@
             <button class="number-button"id="1button" onclick="display.textContent += `1`">1</button>
             <button class="number-button"id="2button" onclick="display.textContent += `2`">2</button>
             <button class="number-button"id="3button" onclick="display.textContent += `3`">3</button>
-            <button id="add-button" class="operator-button" onclick="getFirstNumber(); operator=`+`; operatorSelected=`true`; operator">+</button>
+            <button id="add-button" class="operator-button" onclick="getFirstNumber(); operator=`+`; operatorSelected=`true`">+</button>
         </div>
         <div class="button-container" id="row2">
             <button class="number-button"id="4button" onclick="display.textContent += `4`">4</button>
@@ -34,7 +34,7 @@
         <div class="button-container" id="row4">
             <button id="decimal-button">.</button>
             <button class="number-button"id="0button" onclick="display.textContent += `0`">0</button>
-            <button id="equals-button" class="equals-button" onclick="">=</button>
+            <button id="equals-button" class="equals-button" onclick="getSecondNumber(); operate(firstNumber, operator, secondNumber); display.textContent=resultant">=</button>
             <button id="division-button" class="operator-button" onclick="getFirstNumber(); operator=`/`; operatorSelected=`true`">÷</button>
         </div>
         <div>

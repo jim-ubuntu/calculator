@@ -3,7 +3,7 @@ let isFirstNumOfSecondNum = false;
 let operatorSelected = false;
 let firstNumber = 0;
 let secondNumber = 0;
-let operator = "";
+let resultant = 0;
 let newDisplay = "";
 
 const display = document.getElementById("calc-display");
@@ -22,30 +22,30 @@ numberButtons.forEach((item) =>{
         if (operatorSelected == true){
             display.textContent = display.textContent.substring(display.textContent.length, display.textContent.length -1);
             operatorSelected = false
-        // if (isFirstNumOfSecondNum == true){
-        //     newDisplay = display.textContent.substring(display.textContent.length, display.textContent.length -1);
-        //     display.textContent = newDisplay;
-        //     return isFirstNumOfSecondNum = true;
+        if (isFirstNumOfSecondNum == true){
+            newDisplay = display.textContent.substring(display.textContent.length, display.textContent.length -1);
+            display.textContent = newDisplay;
+            return isFirstNumOfSecondNum = true;
             
-        // }
+        }
         }
     })
 })
 
 function addition(addend1, addend2){
-    return addend1 + addend2;
+    return resultant = (addend1 + addend2);
 }
 
 function subtraction(minuend, subtrahend){
-    return minuend - subtrahend;
+    return resultant = (minuend - subtrahend);
 }
 
 function division(dividend, divisor){
-    return dividend / divisor;
+    return resultant = (dividend / divisor);
 }
 
 function multiplication(factor1, factor2){
-    return factor1 * factor2;
+    return resultant = (factor1 * factor2);
 }
 
 function operate(number1, operator ,number2){
@@ -55,6 +55,7 @@ function operate(number1, operator ,number2){
     }
     else if (operator == "-"){
         isFirstOperation = true;
+        return subtraction(number1, number2);
     }
     else if (operator == "*"){
         return multiplication(number1, number2);
