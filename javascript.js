@@ -77,3 +77,10 @@ function getSecondNumber(){
     return secondNumber = Number(display.textContent);
      
 }
+
+function decimalPoint(){
+    if (display.textContent.indexOf("\.") == -1){
+        display.textContent += ".";
+    }
+    
+}
